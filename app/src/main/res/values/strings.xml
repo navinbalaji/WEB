@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WEB</string>
+    <string name="WebView">WebView</string>
+    <string name="EntertheString">Enter the String</string>
+    <string name="EnterTheValue">Enter</string>
+    <string name="URL">URL Pasted</string>
+    <string name="load">LOAD</string>
+    <string name="copied_url">Copied URL</string>
+</resources>
