@@ -35,15 +35,15 @@ public class MainActivity extends AppCompatActivity {
             ClipData abc = myClipboard.getPrimaryClip();
             ClipData.Item item = abc.getItemAt(0);
             String text = item.getText().toString();
-            if(text.isEmpty()){
-                Toast.makeText(getApplicationContext(), "Please Copy any URL", Toast.LENGTH_SHORT).show();
-            }else {
+            if(text.contains("https")||text.contains("http")||text.contains("www")){
                 webView.setWebViewClient(new WebViewClient());
                 WebSettings webSettings = webView.getSettings();
                 webSettings.setJavaScriptEnabled(true);
                 webView.loadUrl(text);
                 Toast.makeText(getApplicationContext(), "URL Pasted",
                         Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(getApplicationContext(), "Please Copy any Valid URL", Toast.LENGTH_SHORT).show();
             }
 
     }
